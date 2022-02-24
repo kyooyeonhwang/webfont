@@ -1,0 +1,46 @@
+---
+
+---
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>web font preview</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Font Preview</h1>
+  </header>
+  <main>
+    <div class="sidebar">
+      <ul>
+        <li>
+          <label for="">font size</label>
+          <input type="range" min="12" max="100" value="16" id="jsFontSizeRange">
+        </li>
+        <li>
+          <label for="">font weight</label>
+          <input type="range" min="100" max="900" value="400" step="10" id="jsFontWeightRange">
+        </li>
+        <li>
+          <label for="">line height</label>
+          <input type="range" min="1" max="2" value="1" step="0.1" id="jsLineHeightRange">
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+      <textarea name="" cols="30" rows="10" class="font-editor" id="jsFontEditor">123456789</textarea>
+  
+      <div class="font-preview-container" id="jsFontPreview">
+        <div class="font-preview pretendard"></div>
+        <div class="font-preview suit"></div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="/js/app.js"></script>
+</body>
+</html>
