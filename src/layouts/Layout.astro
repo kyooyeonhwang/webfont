@@ -1,0 +1,21 @@
+---
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import MetaHead from '../components/MetaHead.astro'
+
+const { title, description } = Astro.props
+const Slot = 'slot'
+---
+<html lang="ko">
+<head>
+  <MetaHead title={title} description={description} />
+</head>
+<body>
+<div class="container">
+  <Header/>
+  <Footer/>
+  <!-- <slot /> -->
+</div>
+<script src="/js/app.js"></script>
+</body>
+</html>
