@@ -7,6 +7,6 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
   dist: 'public',
   buildOptions: {
     sitemap: true,
-    // site: 'https://astro.build/',
+    site: 'https://compassionate-liskov-bfec94.netlify.app/',
   },
 });
