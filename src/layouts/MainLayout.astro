@@ -13,9 +13,8 @@ const { title, description, head } = Astro.props;
   </head>
   <body>
       <Header/>
-      <main id='main-content' class='wrapper grid-container'>
-        <slot />
-      </main>
+      <slot />
       <Footer />
+  <script src="/js/app.js"></script>
   </body>
 </html>
