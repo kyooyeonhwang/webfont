@@ -1,0 +1,23 @@
+---
+// Layout Import
+import Layout from '../layouts/Layout.astro'
+
+---
+<Layout 
+  title="Home11" 
+  description={`Hey! This is Astromnl a simple Astro blog template.`}>
+    <div class="content">
+      <h2>한글 폰트 모음</h2>
+      <textarea name="" cols="30" rows="10" class="font-editor" id="jsFontEditor">1234567890
+가나다라마바사
+ABCDEFGHIJ
+abcdefghij</textarea>
+  
+      <div class="font-preview-container" id="jsFontPreview">
+        <div class="font-preview pretendard-normal"></div>
+        <div class="font-preview suit-normal"></div>
+        <div class="font-preview minsans-normal"></div>
+        <div class="font-preview spoqa-han-sans-normal"></div>
+      </div>
+    </div>
+</Layout>

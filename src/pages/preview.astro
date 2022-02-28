@@ -1,36 +1,20 @@
 ---
 // Layout Import
-import MainLayout from '../layouts/MainLayout.astro'
+import Layout from '../layouts/Layout.astro'
 
 ---
-<MainLayout 
+<Layout 
   title="Home11" 
   description={`Hey! This is Astromnl a simple Astro blog template.`}>
-    <main>
-      <div class="sidebar">
-        <ul>
-          <li>
-            <label for="">font size</label>
-            <input type="range" min="12" max="100" value="16" id="jsFontSizeRange">
-          </li>
-          <li>
-            <label for="">font weight</label>
-            <input type="range" min="100" max="900" value="400" step="10" id="jsFontWeightRange">
-          </li>
-          <li>
-            <label for="">line height</label>
-            <input type="range" min="1" max="2" value="1" step="0.1" id="jsLineHeightRange">
-          </li>
-        </ul>
+    <div class="content">
+      <h2>가변 폰트 미리보기</h2>
+      <p>한글 가변 폰트 모음입니다.</p>
+      <textarea name="" cols="30" rows="10" class="font-editor" id="jsFontEditor">123456789</textarea>
+  
+      <div class="font-preview-container" id="jsFontPreview">
+        <div class="font-preview pretendard"></div>
+        <div class="font-preview suit"></div>
+        <div class="font-preview minsans"></div>
       </div>
-      <div class="content">
-        <textarea name="" cols="30" rows="10" class="font-editor" id="jsFontEditor">123456789</textarea>
-    
-        <div class="font-preview-container" id="jsFontPreview">
-          <div class="font-preview pretendard"></div>
-          <div class="font-preview suit"></div>
-          <div class="font-preview minsans"></div>
-        </div>
-      </div>
-    </main>
-</MainLayout>
+    </div>
+</Layout>

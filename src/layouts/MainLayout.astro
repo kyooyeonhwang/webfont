@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import MainHead from '../components/MainHead.astro'
+import FontStyleCustom from '../components/FontStyleCustom.astro'
 
 const { title, description, head } = Astro.props;
 ---
@@ -13,7 +14,10 @@ const { title, description, head } = Astro.props;
   </head>
   <body>
       <Header/>
-      <slot />
+      <main>
+        <slot />
+        
+      </main>
       <Footer />
   <script src="/js/app.js"></script>
   </body>
