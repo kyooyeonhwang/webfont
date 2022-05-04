@@ -103,6 +103,18 @@ main .content > h2 + p {
   text-align: center;
 }
 
+/* 메인 */
+.font-family-list {
+  
+}
+.font-family-list dt {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.font-family-list dd {
+  margin-bottom: 40px;
+}
+
 .font-editor {
   width: 100%;
   padding: 10px;
@@ -138,6 +150,12 @@ main .content > h2 + p {
   font-size: 16px;
 }
 
+.notosans-normal {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.notosans-normal::before {
+  content: 'Noto Sans KR';
+}
 .pretendard {
   font-family: 'Pretendard Variable';
 }
