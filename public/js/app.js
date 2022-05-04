@@ -5,6 +5,8 @@ const fontPreviews = jsFontPreview.querySelectorAll('.font-preview');
 const jsFontSizeRange = document.getElementById('jsFontSizeRange');
 const jsFontWeightRange = document.getElementById('jsFontWeightRange');
 const jsLineHeightRange = document.getElementById('jsLineHeightRange');
+const jsColor = document.getElementById('jsColor');
+const jsBackgroundColor = document.getElementById('jsBackgroundColor');
 
 function init() {
   setRangeValue()
@@ -17,6 +19,8 @@ function setRangeValue() {
     fontPreview.style.setProperty('--font-size-22', jsFontSizeRange.value + 'px')
     fontPreview.style.setProperty('--font-weight', jsFontWeightRange.value);
     fontPreview.style.setProperty('--line-height', jsLineHeightRange.value);
+    fontPreview.style.setProperty('--color', jsColor.value);
+    fontPreview.style.setProperty('--background-color', jsBackgroundColor.value);
   })
 }
 
@@ -48,5 +52,17 @@ jsLineHeightRange.addEventListener('input', function(e) {
   console.log(e.currentTarget.value)
   fontPreviews.forEach(fontPreview => {
     fontPreview.style.setProperty('--line-height', e.currentTarget.value);
+  })
+})
+
+jsColor.addEventListener('input', function(e) {
+  fontPreviews.forEach(fontPreview => {
+    fontPreview.style.setProperty('--color', e.currentTarget.value);
+  })
+})
+
+jsBackgroundColor.addEventListener('input', function(e) {
+  fontPreviews.forEach(fontPreview => {
+    fontPreview.style.setProperty('--background-color', e.currentTarget.value);
   })
 })

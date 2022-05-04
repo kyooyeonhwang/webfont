@@ -20,6 +20,8 @@
   --font-size-22:  22px;
   --font-weight: 400;
   --line-height: 1;
+  --color: #767676;
+  --background-color: #ffffff;
 }
 
 *,
@@ -141,6 +143,8 @@ main .content > h2 + p {
   font-weight: var(--font-weight);
   font-size: var(--font-size-22);
   line-height: var(--line-height);
+  color: var(--color);
+  background-color: var(--background-color);
   word-break: break-all;
 }
 .font-preview-container .font-preview::before {
@@ -148,6 +152,7 @@ main .content > h2 + p {
   top: -24px;
   left: 0;
   font-size: 16px;
+  color: #767676;
 }
 
 .notosans-normal {
