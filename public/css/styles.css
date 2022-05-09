@@ -107,14 +107,27 @@ main .content > h2 + p {
 
 /* 메인 */
 .font-family-list {
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  grid-gap: 10px;
+}
+.font-family-list > li {
+  padding: 20px;
+  border: 1px solid #999999;
+  transition: background .6s ease-in-out;
+}
+.font-family-list > li:hover {
+  background: #eeeeee;
 }
 .font-family-list dt {
   margin-bottom: 5px;
-  font-size: 18px;
+  font-size: 22px;
 }
 .font-family-list dd {
-  margin-bottom: 40px;
+  margin-top: 10px;
+}
+.font-family-list a:hover {
+  text-decoration: underline;
 }
 
 .font-editor {
