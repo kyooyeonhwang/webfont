@@ -48,6 +48,8 @@ body, textarea, a, div, p {
 }
 h1 {
   padding: 20px;
+}
+h1 > a {
   font-size: 34px;
   font-family: 'Noto Sans KR', sans-serif;
   text-transform: uppercase;
