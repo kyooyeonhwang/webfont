@@ -14,6 +14,10 @@
   font-family:'Min Sans Regular';
   src:local(※), url(/fonts/static/MinSans-Regular.woff2) format('woff2') }
 
+@font-face{ 
+  font-family:'Noto Sans Variable';
+  src:local(※), url(/fonts/variable/NotoSansKR-VF-distilled.woff2) format('woff2') }
+
 
 :root {
   --font-size-12:  12px;
@@ -217,6 +221,12 @@ main .content > h2 + p {
 }
 .spoqa-han-sans-normal::before {
   content: 'Spoqa Han Sans Neo';
+}
+.notosans {
+  font-family: 'Noto Sans Variable', sans-serif;
+}
+.notosans::before {
+  content: 'Noto Sans Variable';
 }
 
 
