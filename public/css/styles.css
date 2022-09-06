@@ -159,7 +159,7 @@ main .content > h2 + p {
   min-height: 200px;
   padding: 10px;
   border: 1px solid #eee;
-  font-weight: var(--font-weight);
+  font-variation-settings: 'wght' var(--font-weight);
   font-size: var(--font-size-22);
   line-height: var(--line-height);
   color: var(--color);
