@@ -23,7 +23,11 @@
   font-family: 'IBMPlexSansKR-Regular';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');}
 
-:root {
+@font-face{ 
+  font-family:'KoddiUD Gothic Regular';
+  src:local(※), url(/fonts/static/KoddiUDOnGothic-Regular.woff2) format('woff2') }
+
+  :root {
   --font-size-12:  12px;
   --font-size-22:  22px;
   --font-weight: 400;
@@ -243,6 +247,12 @@ main .content > h2 + p {
 }
 .ibmplexsanskr-normal::before {
   content: 'IBMPlexSansKR Regular';
+}
+.koddiud-normal {
+  font-family: 'KoddiUD Gothic Regular', sans-serif;
+}
+.koddiud-normal::before {
+  content: 'KoddiUD Gothic Regular';
 }
 
 
