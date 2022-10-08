@@ -19,7 +19,11 @@
   font-family:'Noto Sans Variable';
   src:local(※), url(/fonts/variable/NotoSansKR-VF-distilled.woff2) format('woff2') }
 
-@font-face {
+@font-face{ 
+  font-family:'Nanum Square Neo Variable';
+  src:local(※), url(/fonts/variable/NanumSquareNeo-Variable.woff2) format('woff2') }
+
+  @font-face {
   font-family: 'IBMPlexSansKR-Regular';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');}
 
@@ -253,6 +257,12 @@ main .content > h2 + p {
 }
 .koddiud-normal::before {
   content: 'KoddiUD Gothic Regular';
+}
+.nanum-square-neo {
+  font-family: 'Nanum Square Neo Variable', sans-serif;
+}
+.nanum-square-neo::before {
+  content: 'Nanum Square Neo Variable';
 }
 
 
