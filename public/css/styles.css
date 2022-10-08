@@ -31,6 +31,10 @@
   font-family:'KoddiUD Gothic Regular';
   src:local(※), url(/fonts/static/KoddiUDOnGothic-Regular.woff2) format('woff2') }
 
+@font-face{ 
+  font-family:'Nanum Square Neo Regular';
+  src:local(※), url(/fonts/variable/NanumSquareNeo-Regular.woff2) format('woff2') }
+
   :root {
   --font-size-12:  12px;
   --font-size-22:  22px;
@@ -263,6 +267,12 @@ main .content > h2 + p {
 }
 .nanum-square-neo::before {
   content: 'Nanum Square Neo Variable';
+}
+.nanum-square-neo-normal {
+  font-family: 'Nanum Square Neo Regular', sans-serif;
+}
+.nanum-square-neo-normal::before {
+  content: 'Nanum Square Neo Regular';
 }
 
 
