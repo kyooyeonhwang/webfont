@@ -37,6 +37,14 @@
   font-family:'Nanum Square Neo Regular';
   src:local(※), url(/fonts/variable/NanumSquareNeo-Regular.woff2) format('woff2') }
 
+@font-face{ 
+  font-family:'87mmilsang Oblique';
+  src:local(※), url(/fonts/static/87MMILSANG-Oblique.woff2) format('woff2') }
+
+@font-face{ 
+  font-family:'87mmilsang Regular';
+  src:local(※), url(/fonts/static/87MMILSANG-Regular.woff2) format('woff2') }
+
   :root {
   --font-size-12:  12px;
   --font-size-22:  22px;
@@ -287,6 +295,12 @@ main .content > h2 + p {
 }
 .nanum-square-neo-normal::before {
   content: 'Nanum Square Neo Regular';
+}
+.mmilsang88-normal {
+  font-family: '87mmilsang Regular', sans-serif;
+}
+.mmilsang88-normal::before {
+  content: '팔칠엠엠 일상체';
 }
 
 
