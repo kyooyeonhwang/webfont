@@ -2,11 +2,62 @@
 // Layout Import
 import MainLayout from '../layouts/MainLayout.astro'
 
+const fontLists = [
+  {
+    name: "Pretendard",
+    link: "https://github.com/orioncactus/pretendard",
+    githubName: "pretendard GitHub"
+  },
+  {
+    name: "SUIT",
+    link: "https://github.com/sunn-us/SUIT",
+    githubName: "SUIT GitHub"
+  },
+  {
+    name: "SUITE",
+    link: "https://github.com/sunn-us/SUITE",
+    githubName: "SUITE GitHub"
+  },
+  {
+    name: "Spoqa Han Sans Neo",
+    link: "https://github.com/spoqa/spoqa-han-sans",
+    githubName: "Spoqa Han Sans Neo GitHub"
+  },
+  {
+    name: "Min Sans",
+    link: "https://github.com/poposnail61/MinSans",
+    githubName: "Min Sans GitHub"
+  },
+  {
+    name: "Noto Sans",
+    link: "https://github.com/akngs/noto-kr-vf-distilled",
+    githubName: "Noto Sans GitHub"
+  },
+  {
+    name: "KoddiUD Font",
+    link: "https://www.koddi.or.kr/ud/sub1_2",
+    githubName: "KoddiUD Font Homeppage"
+  },
+  {
+    name: "Nanum Square Neo",
+    link: "https://campaign.naver.com/nanumsquare_neo/",
+    githubName: "Nanum Square Neo Homeppage"
+  },
+  {
+    name: "팔칠엠엠 일상",
+    link: "https://87mmtypeface.co.kr/",
+    githubName: "팔칠엠엠 일상 Homeppage"
+  },
+  {
+    name: "Wanted Sans",
+    link: "https://github.com/wanteddev/wanted-sans",
+    githubName: "Wanted Sans GitHub"
+  }
+]
 ---
 <MainLayout 
   title="" 
   description={`한글 폰트 모음, 일반 폰트와 가변 폰트 비교, 가변 폰트 미리보기 서비스입니다.`}>
-    <!-- <h1 class="font-size-3">dfsf</h1> -->
     <ul class="">
       <li>
         <a href="/font-list/">한글 폰트 모음</a>
@@ -20,70 +71,15 @@ import MainLayout from '../layouts/MainLayout.astro'
     </ul>
 
     <ul class="font-family-list">
-      <li>
-        <dl>
-          <dt>Pretendard</dt>
-          <dd><a href="https://github.com/orioncactus/pretendard" target="_blank">pretendard github</a></dd>
-        </dl>
-      </li>
-      <li>
-        <dl>
-          <dt>SUIT</dt>
-          <dd><a href="https://github.com/sunn-us/SUIT" target="_blank">SUIT github</a></dd>
-        </dl>
-      </li>
-      <li>
-        <dl>
-          <dt>SUITE</dt>
-          <dd><a href="https://github.com/sunn-us/SUITE" target="_blank">SUITE github</a></dd>
-        </dl>
-      </li>
-      <li>
-        <dl>
-          <dt>Spoqa Han Sans Neo</dt>
-          <dd><a href="https://github.com/spoqa/spoqa-han-sans" target="_blank">github</a></dd>
-        </dl>
-      </li>
-      <li>
-        <dl>
-          <dt>Min Sans Font</dt>
-          <dd><a href="https://github.com/poposnail61/MinSans" target="_blank">Min Sans Font github</a></dd>
-        </dl>
-      </li>
-      <li>
-        <dl>
-          <dt>Noto Sans Font</dt>
-          <dd><a href="https://github.com/akngs/noto-kr-vf-distilled" target="_blank">Noto Sans Font github</a></dd>
-        </dl>
-      </li>
-      <li>
-        <dl>
-          <dt>KoddiUD Font</dt>
-          <dd><a href="https://www.koddi.or.kr/ud/sub1_2" target="_blank">KoddiUD Gothic homepage</a></dd>
-        </dl>
-      </li>
-      <li>
-        <dl>
-          <dt>Nanum Square Neo Font</dt>
-          <dd><a href="https://campaign.naver.com/nanumsquare_neo/" target="_blank">Nanum Square Neo homepage</a></dd>
-        </dl>
-      </li>
-      <li>
-        <dl>
-          <dt>팔칠엠엠 일상 Font</dt>
-          <dd><a href="https://87mmtypeface.co.kr/" target="_blank">팔칠엠엠 일상체 homepage</a></dd>
-        </dl>
-      </li>
-      <li>
-        <dl>
-          <dt>Wanted Sans Font</dt>
-          <dd><a href="https://github.com/wanteddev/wanted-sans" target="_blank">Wanted Sans github</a></dd>
-        </dl>
-      </li>
+      {
+        fontLists.map((data) => (
+          <li>
+            <dl>
+              <dt>{data.name}</dt>
+              <dd><a href={data.link} target="_blank">{data.githubName}</a></dd>
+            </dl>
+          </li>
+        ))
+      }
     </ul>
-
-
-    
-    <!-- 'Min Sans Font
-      https://github.com/poposnail61 -->
 </MainLayout>
