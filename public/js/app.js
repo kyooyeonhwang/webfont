@@ -25,44 +25,43 @@ function setRangeValue() {
 }
 
 function getTextareaValue() {
-  listItems.forEach(fontPreview => {
-    fontPreview.querySelector('.ui-font-preview').innerHTML = jsFontEditor.value.replace(/\r?\n/g, '<br />');;
+  listItems.forEach(listItem => {
+    listItem.querySelector('.ui-font-preview').innerHTML = jsFontEditor.value.replace(/\r?\n/g, '<br />');;
   })
 }
 
 jsFontEditor.addEventListener('input', function(e) {
-  listItems.forEach(fontPreview => {
-    fontPreview.innerHTML = e.currentTarget.value.replace(/\r?\n/g, '<br />');;
+  listItems.forEach(listItem => {
+    listItem.innerHTML = e.currentTarget.value.replace(/\r?\n/g, '<br />');;
   })
 })
 
 jsFontSizeRange.addEventListener('input', function(e) {
-  listItems.forEach(fontPreview => {
-    fontPreview.style.setProperty('--font-size-22', e.currentTarget.value + 'px')
+  listItems.forEach(listItem => {
+    listItem.style.setProperty('--font-size-22', e.currentTarget.value + 'px')
   })
 })
 
 jsFontWeightRange.addEventListener('input', function(e) {
-  listItems.forEach(fontPreview => {
-    fontPreview.style.setProperty('--font-weight', e.currentTarget.value);
+  listItems.forEach(listItem => {
+    listItem.style.setProperty('--font-weight', e.currentTarget.value);
   })
 })
 
 jsLineHeightRange.addEventListener('input', function(e) {
-  console.log(e.currentTarget.value)
-  listItems.forEach(fontPreview => {
-    fontPreview.style.setProperty('--line-height', e.currentTarget.value);
+  listItems.forEach(listItem => {
+    listItem.style.setProperty('--line-height', e.currentTarget.value);
   })
 })
 
 jsColor.addEventListener('input', function(e) {
-  listItems.forEach(fontPreview => {
-    fontPreview.style.setProperty('--color', e.currentTarget.value);
+  listItems.forEach(listItem => {
+    listItem.style.setProperty('--color', e.currentTarget.value);
   })
 })
 
 jsBackgroundColor.addEventListener('input', function(e) {
-  listItems.forEach(fontPreview => {
-    fontPreview.style.setProperty('--background-color', e.currentTarget.value);
+  listItems.forEach(listItem => {
+    listItem.style.setProperty('--background-color', e.currentTarget.value);
   })
 })
