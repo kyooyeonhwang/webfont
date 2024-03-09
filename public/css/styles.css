@@ -71,9 +71,8 @@ a:hover {
 }
 
 body, textarea, a, div, p {
-  font-family: 'Noto Sans KR', sans-serif;
-  font-family:'Min Sans Regular', sans-serif;
-  color: #666666;
+  font-family: 'Pretendard Variable', sans-serif;
+  color: #111111;
 }
 
 .header {
@@ -181,16 +180,17 @@ main .content > h2 + p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  row-gap: 40px;
   min-height: 200px;
   padding-top: 20px;
 }
-.font-preview-container .font-preview {
+.font-preview-container .list-item {
   position: relative;
   flex: 1;
   min-height: 200px;
-  padding: 10px;
-  border: 1px solid #eee;
+  padding: 15px;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .05);
   font-variation-settings: 'wght' var(--font-weight);
   font-size: var(--font-size-22);
   line-height: var(--line-height);
@@ -198,134 +198,69 @@ main .content > h2 + p {
   background-color: var(--background-color);
   word-break: break-all;
 }
-.font-preview-container .font-preview::before {
-  position: absolute;
-  top: -24px;
-  left: 0;
-  font-size: 16px;
-  color: #767676;
-}
 .font-preview-container .font-name {
-  margin-bottom: 7px;
+  margin-bottom: 15px;
+  font-weight: 700;
   font-size: 16px;
-  color: #767676;
 }
 
-/* .notosans-normal {
+.notosans-normal {
   font-family: 'Noto Sans KR', sans-serif;
-}
-.notosans-normal::before {
-  content: 'Noto Sans KR';
 }
 .pretendard {
   font-family: 'Pretendard Variable';
 }
-.pretendard::before {
-  content: 'Pretendard Variable';
-}
 .pretendard-normal {
   font-family: 'Pretendard';
-}
-.pretendard-normal::before {
-  content: 'Pretendard';
 }
 .suit {
   font-family: 'SUIT Variable';
 }
-.suit::before {
-  content: 'SUIT Variable';
-}
 .suit-normal {
   font-family: ‘SUIT’, sans-serif;
-}
-.suit-normal::before {
-  content: 'SUIT';
 }
 .suite {
   font-family: 'SUITE Variable', sans-serif;
 }
-.suite::before {
-  content: 'SUITE Variable';
-}
 .suite-normal {
   font-family: 'SUITE', sans-serif;
-}
-.suite-normal::before {
-  content: 'SUITE';
 }
 .minsans {
   font-family:'Min Sans Variable';
 }
-.minsans::before {
-  content: 'Min Sans Variable';
-}
 .minsans-normal {
   font-family:'Min Sans Regular';
-}
-.minsans-normal::before {
-  content: 'Min Sans';
 }
 .spoqa-han-sans-normal {
   font-family: 'Spoqa Han Sans Neo', sans-serif;
 }
-.spoqa-han-sans-normal::before {
-  content: 'Spoqa Han Sans Neo';
-}
 .notosans {
   font-family: 'Noto Sans Variable', sans-serif;
-}
-.notosans::before {
-  content: 'Noto Sans Variable';
 }
 .nanumgothic-normal {
   font-family: 'Nanum Gothic', sans-serif;
 }
-.nanumgothic-normal::before {
-  content: 'Nanum Gothic';
-}
 .ibmplexsanskr-normal {
   font-family: 'IBMPlexSansKR-Regular', sans-serif;
-}
-.ibmplexsanskr-normal::before {
-  content: 'IBMPlexSansKR Regular';
 }
 .koddiud-normal {
   font-family: 'KoddiUD Gothic Regular', sans-serif;
 }
-.koddiud-normal::before {
-  content: 'KoddiUD Gothic Regular';
-}
 .nanum-square-neo {
   font-family: 'Nanum Square Neo Variable', sans-serif;
-}
-.nanum-square-neo::before {
-  content: 'Nanum Square Neo Variable';
 }
 .nanum-square-neo-normal {
   font-family: 'Nanum Square Neo Regular', sans-serif;
 }
-.nanum-square-neo-normal::before {
-  content: 'Nanum Square Neo Regular';
-}
 .mmilsang88-normal {
   font-family: '87mmilsang Regular', sans-serif;
-}
-.mmilsang88-normal::before {
-  content: '팔칠엠엠 일상체';
 }
 .wantedsans-normal {
   font-family: 'Wanted Sans', sans-serif;
 }
-.wantedsans-normal::before {
-  content: 'Wanted Sans';
-}
 .wantedsans {
   font-family: 'Wanted Sans Variable', sans-serif;
 }
-.wantedsans::before {
-  content: 'Wanted Sans Variable';
-} */
-
 
 /*********** Baseline, reset styles ***********/
 input[type="range"] {
