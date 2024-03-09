@@ -3,13 +3,34 @@
 import Layout from '../layouts/Layout.astro'
 
 const fontPreviewLists = [
-  'pretendard',
-  'suit',
-  'suite',
-  'minsans',
-  'notosans',
-  'nanum-square-neo',
-  'wantedsans',
+  {
+    fontName: 'Pretendard Variable',
+    className: 'pretendard'
+  },
+  {
+    fontName: 'SUIT Variable',
+    className: 'suit'
+  },
+  {
+    fontName: 'SUITE Variable',
+    className: 'suite'
+  },
+  {
+    fontName: 'Min Sans Variable',
+    className: 'minsans'
+  },
+  {
+    fontName: 'Noto Sans KR Variable',
+    className: 'notosans'
+  },
+  {
+    fontName: 'Nanum Square Neo Variable',
+    className: 'nanum-square-neo'
+  },
+  {
+    fontName: 'Wanted Sans Variable',
+    className: 'wantedsans'
+  }
 ]
 ---
 <Layout 
@@ -20,10 +41,15 @@ const fontPreviewLists = [
       <p>한글 가변 폰트 모음입니다.</p>
       <textarea name="" cols="30" rows="10" class="font-editor" id="jsFontEditor">123456789</textarea>
 
-      <div class="font-preview-container" id="jsFontPreview">
+      <ul class="font-preview-container" id="jsFontPreview">
         {
-          fontPreviewLists.map((data) => <div class:list={[ 'font-preview', [data] ]}></div>)
+          fontPreviewLists.map((data) => (
+            <li class="list-item">
+              <p class="font-name">{data.fontName}</p>
+              <div class:list={[ 'font-preview', [data.className] ]}></div>
+            </li>
+          ))
         }
-      </div>
+      </ul>
     </div>
 </Layout>
