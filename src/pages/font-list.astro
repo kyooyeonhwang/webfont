@@ -53,12 +53,16 @@ const fontPreviewLists = [
   title="| 한글 본문 폰트" 
   description={`한글 폰트중에 본문에 사용할만한 폰트 목록입니다.`}>
     <div class="content">
-      <h2>한글 폰트 모음</h2>
-      <p>본문에 사용할만한 폰트 목록입니다.</p>
-      <textarea name="" cols="30" rows="10" class="font-editor" id="jsFontEditor">1234567890
-가나다라마바사
-ABCDEFGHIJ
-abcdefghij</textarea>
+      <div class="header-wrap">
+        <hgroup>
+          <h2>한글 폰트 모음</h2>
+          <p>본문에 사용할만한 폰트 목록입니다.</p>
+        </hgroup>
+        <textarea name="" cols="30" rows="10" class="font-editor" id="jsFontEditor">1234567890
+  가나다라마바사
+  ABCDEFGHIJ
+  abcdefghij</textarea>
+      </div>
 
       <ul class="font-preview-container" id="jsFontPreview">
         {

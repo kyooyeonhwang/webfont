@@ -37,9 +37,13 @@ const fontPreviewLists = [
   title="| 가변 폰트 미리보기" 
   description={`한글 본문 폰트중에 가변 폰트를 지원하는 폰트를 미리보기 위한 서비스입니다.`}>
     <div class="content">
-      <h2>가변 폰트 미리보기</h2>
-      <p>한글 가변 폰트 모음입니다.</p>
-      <textarea name="" cols="30" rows="10" class="font-editor" id="jsFontEditor">123456789</textarea>
+      <div class="header-wrap">
+        <hgroup>
+          <h2>가변 폰트 미리보기</h2>
+          <p>한글 가변 폰트 모음입니다.</p>
+        </hgroup>
+        <textarea name="" cols="30" rows="10" class="font-editor" id="jsFontEditor">123456789</textarea>
+      </div>
 
       <ul class="font-preview-container" id="jsFontPreview">
         {

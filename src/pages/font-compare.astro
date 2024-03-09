@@ -7,9 +7,14 @@ import Layout from '../layouts/Layout.astro'
   title="| 일반폰트와 가변 폰트를 비교" 
   description={`일반폰트와 가변 폰트를 비교하기 위해서 입니다.`}>
     <div class="content">
-      <h2>폰트 비교</h2>
-      <p>일반폰트와 가변 폰트를 비교하기 위해서 입니다.</p>
-      <textarea name="" cols="30" rows="10" class="font-editor" id="jsFontEditor">123456789</textarea>
+      <div class="header-wrap">
+        <hgroup>
+          <h2>폰트 비교</h2>
+          <p>일반폰트와 가변 폰트를 비교하기 위해서 입니다.</p>
+        </hgroup>
+        <textarea name="" cols="30" rows="10" class="font-editor" id="jsFontEditor">123456789</textarea>
+
+      </div>
   
       <ul class="font-preview-container" id="jsFontPreview">
         <li class="list-item">
