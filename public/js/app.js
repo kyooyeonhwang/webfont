@@ -1,6 +1,6 @@
 const jsFontEditor = document.getElementById('jsFontEditor');
 const jsFontPreview = document.getElementById('jsFontPreview');
-const fontPreviews = jsFontPreview.querySelectorAll('.font-preview');
+const listItems = jsFontPreview.querySelectorAll('.list-item');
 
 const jsFontSizeRange = document.getElementById('jsFontSizeRange');
 const jsFontWeightRange = document.getElementById('jsFontWeightRange');
@@ -15,7 +15,7 @@ function init() {
 init()
 
 function setRangeValue() {
-  fontPreviews.forEach(fontPreview => {
+  listItems.forEach(fontPreview => {
     fontPreview.style.setProperty('--font-size-22', jsFontSizeRange.value + 'px')
     fontPreview.style.setProperty('--font-weight', jsFontWeightRange.value);
     fontPreview.style.setProperty('--line-height', jsLineHeightRange.value);
@@ -25,44 +25,44 @@ function setRangeValue() {
 }
 
 function getTextareaValue() {
-  fontPreviews.forEach(fontPreview => {
-    fontPreview.innerHTML = jsFontEditor.value.replace(/\r?\n/g, '<br />');;
+  listItems.forEach(fontPreview => {
+    fontPreview.querySelector('.ui-font-preview').innerHTML = jsFontEditor.value.replace(/\r?\n/g, '<br />');;
   })
 }
 
 jsFontEditor.addEventListener('input', function(e) {
-  fontPreviews.forEach(fontPreview => {
+  listItems.forEach(fontPreview => {
     fontPreview.innerHTML = e.currentTarget.value.replace(/\r?\n/g, '<br />');;
   })
 })
 
 jsFontSizeRange.addEventListener('input', function(e) {
-  fontPreviews.forEach(fontPreview => {
+  listItems.forEach(fontPreview => {
     fontPreview.style.setProperty('--font-size-22', e.currentTarget.value + 'px')
   })
 })
 
 jsFontWeightRange.addEventListener('input', function(e) {
-  fontPreviews.forEach(fontPreview => {
+  listItems.forEach(fontPreview => {
     fontPreview.style.setProperty('--font-weight', e.currentTarget.value);
   })
 })
 
 jsLineHeightRange.addEventListener('input', function(e) {
   console.log(e.currentTarget.value)
-  fontPreviews.forEach(fontPreview => {
+  listItems.forEach(fontPreview => {
     fontPreview.style.setProperty('--line-height', e.currentTarget.value);
   })
 })
 
 jsColor.addEventListener('input', function(e) {
-  fontPreviews.forEach(fontPreview => {
+  listItems.forEach(fontPreview => {
     fontPreview.style.setProperty('--color', e.currentTarget.value);
   })
 })
 
 jsBackgroundColor.addEventListener('input', function(e) {
-  fontPreviews.forEach(fontPreview => {
+  listItems.forEach(fontPreview => {
     fontPreview.style.setProperty('--background-color', e.currentTarget.value);
   })
 })

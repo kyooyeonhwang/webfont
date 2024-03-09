@@ -37,7 +37,7 @@
 
 @font-face{ 
   font-family:'Nanum Square Neo Regular';
-  src:local(※), url(/fonts/variable/NanumSquareNeo-Regular.woff2) format('woff2') }
+  src:local(※), url(/fonts/static/NanumSquareNeo-Regular.woff2) format('woff2') }
 
 @font-face{ 
   font-family:'87mmilsang Oblique';
@@ -191,17 +191,19 @@ main .content > h2 + p {
   border: 1px solid #d8d8d8;
   border-radius: 8px;
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .05);
-  font-variation-settings: 'wght' var(--font-weight);
-  font-size: var(--font-size-22);
-  line-height: var(--line-height);
-  color: var(--color);
   background-color: var(--background-color);
-  word-break: break-all;
 }
 .font-preview-container .font-name {
   margin-bottom: 15px;
   font-weight: 700;
   font-size: 16px;
+}
+.font-preview-container .font-preview {
+  font-variation-settings: 'wght' var(--font-weight);
+  font-size: var(--font-size-22);
+  line-height: var(--line-height);
+  color: var(--color);
+  word-break: break-all;
 }
 
 .notosans-normal {

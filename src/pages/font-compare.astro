@@ -11,9 +11,15 @@ import Layout from '../layouts/Layout.astro'
       <p>일반폰트와 가변 폰트를 비교하기 위해서 입니다.</p>
       <textarea name="" cols="30" rows="10" class="font-editor" id="jsFontEditor">123456789</textarea>
   
-      <div class="font-preview-container" id="jsFontPreview">
-        <div class="font-preview pretendard"></div>
-        <div class="font-preview pretendard-normal"></div>
-      </div>
+      <ul class="font-preview-container" id="jsFontPreview">
+        <li class="list-item">
+          <p class="font-name">Pretendard Variable</p>
+          <div class="font-preview ui-font-preview pretendard"></div>
+        </li>
+        <li class="list-item">
+          <p class="font-name">Pretendard</p>
+          <div class="font-preview ui-font-preview pretendard-normal"></div>
+        </li>
+      </ul>
     </div>
 </Layout>
