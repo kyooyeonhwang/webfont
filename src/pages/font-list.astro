@@ -3,18 +3,50 @@
 import Layout from '../layouts/Layout.astro'
 
 const fontPreviewLists = [
-  'notosans-normal',
-  'notosans-normal',
-  'suit-normal',
-  'suite-normal',
-  'minsans-normal',
-  'spoqa-han-sans-normal',
-  'nanumgothic-normal',
-  'ibmplexsanskr-normal',
-  'koddiud-normal',
-  'nanum-normal',
-  'mmilsang88-normal',
-  'wantedsans-normal',
+  {
+    fontName: 'Noto Sans KR',
+    className: 'notosans-normal'
+  },
+  {
+    fontName: 'SUIT',
+    className: 'suit-normal'
+  },
+  {
+    fontName: 'SUITE',
+    className: 'suite-normal'
+  },
+  {
+    fontName: 'Min Sans',
+    className: 'minsans-normal'
+  },
+  {
+    fontName: 'Spoqa Han Sans Neo',
+    className: 'spoqa-han-sans-normal'
+  },
+  {
+    fontName: 'Nanum Gothic',
+    className: 'nanumgothic-normal'
+  },
+  {
+    fontName: 'IBMPlexSansKR Regular',
+    className: 'ibmplexsanskr-normal'
+  },
+  {
+    fontName: 'KoddiUD Gothic Regular',
+    className: 'koddiud-normal'
+  },
+  {
+    fontName: 'Nanum Square Neo Regular',
+    className: 'nanum-square-neo-normal'
+  },
+  {
+    fontName: '87mmilsang Regular',
+    className: 'mmilsang88-normal'
+  },
+  {
+    fontName: 'Wanted Sans',
+    className: 'wantedsans-normal'
+  }
 ]
 ---
 <Layout 
@@ -28,10 +60,15 @@ const fontPreviewLists = [
 ABCDEFGHIJ
 abcdefghij</textarea>
 
-      <div class="font-preview-container" id="jsFontPreview">
+      <ul class="font-preview-container" id="jsFontPreview">
         {
-          fontPreviewLists.map((data) => <div class:list={[ 'font-preview', [data] ]}></div>)
+          fontPreviewLists.map((data) => (
+            <li class="list-item">
+              <p class="font-name">{data.fontName}</p>
+              <div class:list={[ 'font-preview', [data.className] ]}></div>
+            </li>
+          ))
         }
-      </div>
+      </ul>
     </div>
 </Layout>

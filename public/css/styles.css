@@ -205,8 +205,13 @@ main .content > h2 + p {
   font-size: 16px;
   color: #767676;
 }
+.font-preview-container .font-name {
+  margin-bottom: 7px;
+  font-size: 16px;
+  color: #767676;
+}
 
-.notosans-normal {
+/* .notosans-normal {
   font-family: 'Noto Sans KR', sans-serif;
 }
 .notosans-normal::before {
@@ -319,7 +324,7 @@ main .content > h2 + p {
 }
 .wantedsans::before {
   content: 'Wanted Sans Variable';
-}
+} */
 
 
 /*********** Baseline, reset styles ***********/
