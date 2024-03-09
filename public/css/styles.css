@@ -107,8 +107,8 @@ h1 > a {
 }
 main {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  column-gap: 30px;
+  grid-template-columns: 1fr;
+  gap: 30px;
   padding: 40px 20px;
 }
 main .content > h2 {
@@ -121,21 +121,33 @@ main .content > h2 + p {
   font-size: 18px;
   color: #444444;
 }
-.sidebar {}
+.sidebar {
+  position: sticky;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .05);
+}
 .sidebar .tit {
-  margin-bottom: 20px;
+  margin-right: 20px;
   font-size: 20px;
 }
+.sidebar > ul {
+  display: flex;
+}
 .sidebar li {
-  margin-bottom: 15px;
+  margin-right: 20px;
 }
 .sidebar li label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  margin-left: 2px;
+  font-size: 11px;
   text-transform: capitalize;
-}
-.sidebar li input {
-  width: 100%;
 }
 .footer {
   padding: 30px 0;
@@ -290,16 +302,15 @@ input[type="range"]::-webkit-slider-runnable-track {
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
-  margin-top: -5px; /* Centers thumb on the track */
-  background-color: #808080;
+  margin-top: -8px; /* Centers thumb on the track */
+  background-color: #181a33;
   border-radius: 50%;
-  height: 16px;
-  width: 16px;
+  height: 20px;
+  width: 20px;
 }
 
 input[type="range"]:focus::-webkit-slider-thumb {
-  outline: 3px solid #808080;
-  outline-offset: 0.125rem;
+  outline: 0;
 }
 
 /*********** Firefox styles ***********/
@@ -315,11 +326,40 @@ input[type="range"]::-moz-range-thumb {
   background-color: #808080;
   border: none; /*Removes extra border that FF applies*/
   border-radius: 50%;
-  height: 16px;
-  width: 16px;
+  height: 20px;
+  width: 20px;
 }
 
 input[type="range"]:focus::-moz-range-thumb{
   outline: 3px solid #808080;
   outline-offset: 0.125rem;
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background-color: #e4e4e4;
+  cursor: pointer;
+  border: 1px solid #777777;
+  border-radius: 50%;
+  padding: 1px;
+}
+input[type="color"]::-webkit-color-swatch {
+  border-radius: 50%;
+  border: none;
+}
+input[type="color"]::-moz-color-swatch {
+  border-radius: 50%;
+  border: none;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
 }
