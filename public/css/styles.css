@@ -149,6 +149,7 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  height: 170px;
 }
 .header-wrap h2 {
   margin-bottom: 15px;
@@ -160,10 +161,15 @@ main {
   font-size: 18px;
   color: #444444;
 }
-.header-wrap textarea {
+.header-wrap .font-editor {
+  width: 100%;
+  padding: 10px;
   border: 1px solid #d8d8d8;
   border-radius: 8px;
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .05);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size-22);
+  line-height: var(--line-height);
 }
 
 /* 메인 */
@@ -191,15 +197,6 @@ main {
   text-decoration: underline;
 }
 
-.font-editor {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #eee;
-  margin-bottom: 20px;
-  font-weight: var(--font-weight);
-  font-size: var(--font-size-22);
-  line-height: var(--line-height);
-}
 .font-preview-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
