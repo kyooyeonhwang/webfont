@@ -11,6 +11,8 @@
 @import url('https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.2/packages/wanted-sans/fonts/webfonts/static/complete/WantedSans.min.css');
 @import url('https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.2/packages/wanted-sans/fonts/webfonts/variable/complete/WantedSansVariable.min.css');
 
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
 @font-face{ 
   font-family:'Min Sans Variable';
   src:local(※), url(/fonts/variable/MinSansVF.woff2) format('woff2') }
@@ -79,16 +81,22 @@ body, textarea, a, div, p {
   position: relative;
   display: flex;
   justify-content: space-between;
-  background-color: #181a33;
+  background: #558B58;
 }
 h1 {
   padding: 20px;
 }
 h1 > a {
   font-size: 34px;
-  font-family: 'Noto Sans KR', sans-serif;
   text-transform: uppercase;
-  color: rgba(255,255,255,.7);
+  color: #F5E16D;
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
 }
 .nav {
   position: absolute;
@@ -100,7 +108,7 @@ h1 > a {
   display: block;
   padding: 12px 10px;
   line-height: 1;
-  color: rgba(255,255,255,.7);
+  color: rgba(255, 255, 255, 1);
 }
 .nav a:hover {
 
@@ -175,13 +183,14 @@ main {
 /* 메인 */
 .font-family-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
-  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  grid-gap: 20px;
 }
 .font-family-list > li {
   padding: 20px;
-  border: 1px solid #999999;
-  transition: background .6s ease-in-out;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .05);
 }
 .font-family-list > li:hover {
   background: #eeeeee;
@@ -193,8 +202,23 @@ main {
 .font-family-list dd {
   margin-top: 10px;
 }
+.font-family-list a {
+  display: inline-flex;
+  padding-left: 23px;
+  background-image: url('../assets/icon_home.svg');
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+}
 .font-family-list a:hover {
   text-decoration: underline;
+}
+.font-family-list a[href*='github'] {
+  background-image: url('../assets/icon_github.svg');
+  /* background-size: 16px auto; */
+}
+.font-family-list a[href=''] {
+  background-image: url('../assets/icon_home.svg');
 }
 
 .font-preview-container {
