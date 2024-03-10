@@ -190,35 +190,42 @@ main {
   padding: 20px;
   border: 1px solid #d8d8d8;
   border-radius: 8px;
-  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .05);
+  transition: background 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .03);
 }
 .font-family-list > li:hover {
-  background: #eeeeee;
+  background: rgba(0, 0, 0, .03);
 }
 .font-family-list dt {
   margin-bottom: 5px;
   font-size: 22px;
 }
+.font-family-list dt + dd {
+  margin-left: auto;
+}
 .font-family-list dd {
-  margin-top: 10px;
+  display: inline-flex;
+  margin-left: 6px;
 }
 .font-family-list a {
   display: inline-flex;
-  padding-left: 23px;
-  background-image: url('../assets/icon_home.svg');
+  width: 20px;
+  height: 20px;
   background-position: 0 50%;
   background-repeat: no-repeat;
-  background-size: 16px 16px;
+  background-size: 100% 100%;
+  font-size: 0;
+  color: transparent;
 }
-.font-family-list a:hover {
-  text-decoration: underline;
-}
-.font-family-list a[href*='github'] {
+.font-family-list a.github {
   background-image: url('../assets/icon_github.svg');
-  /* background-size: 16px auto; */
+}
+.font-family-list a.homepage {
+  background-image: url('../assets/icon_home.svg');
 }
 .font-family-list a[href=''] {
-  background-image: url('../assets/icon_home.svg');
+  opacity: 0.7;
+  pointer-events: none;
 }
 
 .font-preview-container {

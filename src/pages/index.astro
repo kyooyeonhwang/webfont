@@ -5,53 +5,53 @@ import MainLayout from '../layouts/MainLayout.astro'
 const fontLists = [
   {
     name: "Pretendard",
-    link: "https://github.com/orioncactus/pretendard",
-    githubName: "pretendard GitHub"
+    github: "https://github.com/orioncactus/pretendard",
+    homepage: "https://cactus.tistory.com/306"
   },
   {
     name: "SUIT",
-    link: "https://github.com/sunn-us/SUIT",
-    githubName: "SUIT GitHub"
+    github: "https://github.com/sunn-us/SUIT",
+    homepage: "https://sun.fo/suit/"
   },
   {
     name: "SUITE",
-    link: "https://github.com/sunn-us/SUITE",
-    githubName: "SUITE GitHub"
+    github: "https://github.com/sunn-us/SUITE",
+    homepage: "https://sun.fo/suite/"
   },
   {
     name: "Spoqa Han Sans Neo",
-    link: "https://github.com/spoqa/spoqa-han-sans",
-    githubName: "Spoqa Han Sans Neo GitHub"
+    github: "https://github.com/spoqa/spoqa-han-sans",
+    homepage: "https://spoqa.github.io/spoqa-han-sans/"
   },
   {
     name: "Min Sans",
-    link: "https://github.com/poposnail61/MinSans",
-    githubName: "Min Sans GitHub"
+    github: "https://github.com/poposnail61/MinSans",
+    homepage: "https://jinseong-kim.notion.site/Min-Sans-f4c815c207d2435d9cc468dd63196f07"
   },
   {
     name: "Noto Sans",
-    link: "https://github.com/akngs/noto-kr-vf-distilled",
-    githubName: "Noto Sans GitHub"
+    github: "https://github.com/akngs/noto-kr-vf-distilled",
+    homepage: "https://akngs.github.io/noto-kr-vf-distilled/"
   },
   {
     name: "KoddiUD Font",
-    link: "https://www.koddi.or.kr/ud/sub1_2",
-    githubName: "KoddiUD Font Homeppage"
+    github: "",
+    homepage: "https://www.koddi.or.kr/ud/sub1_2"
   },
   {
     name: "Nanum Square Neo",
-    link: "https://campaign.naver.com/nanumsquare_neo/",
-    githubName: "Nanum Square Neo Homeppage"
+    github: "",
+    homepage: "https://campaign.naver.com/nanumsquare_neo/"
   },
   {
     name: "팔칠엠엠 일상",
-    link: "https://87mmtypeface.co.kr/",
-    githubName: "팔칠엠엠 일상 Homeppage"
+    github: "",
+    homepage: "https://87mmtypeface.co.kr/"
   },
   {
     name: "Wanted Sans",
-    link: "https://github.com/wanteddev/wanted-sans",
-    githubName: "Wanted Sans GitHub"
+    github: "https://github.com/wanteddev/wanted-sans",
+    homepage: "https://github.com/wanteddev/wanted-sans/blob/HEAD/documentation/concept/README.md"
   }
 ]
 ---
@@ -64,7 +64,8 @@ const fontLists = [
           <li>
             <dl>
               <dt>{data.name}</dt>
-              <dd><a href={data.link} target="_blank">{data.githubName}</a></dd>
+              <dd><a href={data.github} class="github" target="_blank" title="새창열림">GitHub</a></dd>
+              <dd><a href={data.homepage} class="homepage" target="_blank" title="새창열림">Homeppage</a></dd>
             </dl>
           </li>
         ))
