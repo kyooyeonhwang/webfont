@@ -1,4 +1,10 @@
 ---
-
+// const year = new Date().getFullYear();
+console.log('year')
 ---
-<footer class="footer">Copyrightⓒ2023 Hwang All rights reserved.</footer>
+<footer class="footer">Copyrightⓒ<span id="js-year"></span> Hwang All rights reserved.</footer>
+<script>
+const year = document.querySelector('#js-year');
+const todayYear = new Date().getFullYear();
+year.innerHTML = `${todayYear}`;
+</script>
