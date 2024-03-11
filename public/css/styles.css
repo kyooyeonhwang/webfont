@@ -178,6 +178,7 @@ main {
   font-weight: var(--font-weight);
   font-size: var(--font-size-22);
   line-height: var(--line-height);
+  resize: none;
 }
 
 /* 메인 */
