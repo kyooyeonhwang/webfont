@@ -180,6 +180,9 @@ main {
   line-height: var(--line-height);
   resize: none;
 }
+.header-wrap .font-editor:focus {
+  outline: none;
+}
 
 /* 메인 */
 .introduction {
