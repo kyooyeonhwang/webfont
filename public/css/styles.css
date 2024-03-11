@@ -181,6 +181,11 @@ main {
 }
 
 /* 메인 */
+.introduction {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
 .font-family-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
@@ -252,6 +257,7 @@ main {
 }
 .font-preview-container .font-preview {
   font-variation-settings: 'wght' var(--font-weight);
+  font-weight: var(--font-weight);
   font-size: var(--font-size-22);
   line-height: var(--line-height);
   color: var(--color);
