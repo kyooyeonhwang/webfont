@@ -32,7 +32,7 @@ function getTextareaValue() {
 
 jsFontEditor.addEventListener('input', function(e) {
   listItems.forEach(listItem => {
-    listItem.innerHTML = e.currentTarget.value.replace(/\r?\n/g, '<br />');;
+    listItem.querySelector('.ui-font-preview').innerHTML = e.currentTarget.value.replace(/\r?\n/g, '<br />');;
   })
 })
 
