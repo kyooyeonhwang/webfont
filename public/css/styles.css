@@ -334,6 +334,10 @@ input[type="range"] {
   cursor: pointer;
   width: 100%;
 }
+input[type="range"]:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
 
 /* Removes default focus */
 input[type="range"]:focus {
