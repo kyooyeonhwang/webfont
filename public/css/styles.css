@@ -53,12 +53,12 @@
   font-family:'87mmilsang Regular';
   src:local(※), url(/fonts/static/87MMILSANG-Regular.woff2) format('woff2') }
 
-  :root {
-  --font-size-12:  12px;
+:root {
+  --fs-base: 16px;
   --font-size-22:  22px;
   --font-weight: 400;
   --line-height: 1;
-  --color: #111111;
+  --color-base: #111111;
   --color-gray2: #444444;
   --color-white: rgba(255, 255, 255, 1);
   --background-color: rgba(255, 255, 255, 1);
@@ -80,8 +80,9 @@ a:hover {
 }
 
 body, textarea, a, div, p {
+  font-size: var(--fs-base);
   font-family: 'Pretendard Variable', sans-serif;
-  color: var(--color);
+  color: var(--color-base);
 }
 
 .header {
@@ -128,6 +129,7 @@ main {
 }
 .sidebar {
   --input-color-size: 20px;
+  --input-range-border: 2px; 
   position: sticky;
   top: 10px;
   z-index: 99;
@@ -263,14 +265,14 @@ main {
 .font-preview-container .font-name {
   margin-bottom: 15px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: var(--fs-base);
 }
 .font-preview-container .font-preview {
   font-variation-settings: 'wght' var(--font-weight);
   font-weight: var(--font-weight);
   font-size: var(--font-size-22);
   line-height: var(--line-height);
-  color: var(--color);
+  color: var(--color-base);
   word-break: break-all;
 }
 
@@ -354,7 +356,7 @@ input[type="range"]:focus {
 /* slider track */
 input[type="range"]::-webkit-slider-runnable-track {
   background-color: var(--track-color);
-  border-radius: 2px;
+  border-radius: var(--input-range-border);
   height: 6px;
 }
 
@@ -377,7 +379,7 @@ input[type="range"]:focus::-webkit-slider-thumb {
 /* slider track */
 input[type="range"]::-moz-range-track {
   background-color: var(--track-color);
-  border-radius: 2px;
+  border-radius: var(--input-range-border);
   height: 6px;
 }
 
