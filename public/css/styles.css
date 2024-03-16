@@ -58,8 +58,15 @@
   --font-size-22:  22px;
   --font-weight: 400;
   --line-height: 1;
-  --color: #767676;
-  --background-color: #ffffff;
+  --color: #111111;
+  --color-gray2: #444444;
+  --color-white: rgba(255, 255, 255, 1);
+  --background-color: rgba(255, 255, 255, 1);
+  --background-color-gray2: #e4e4e4;
+  --border-color: #d8d8d8;
+  --track-color: #dedede;
+  --thumb-color: #181a33;
+  --input-border-color: #bbbbbb;
 }
 
 *,
@@ -74,7 +81,7 @@ a:hover {
 
 body, textarea, a, div, p {
   font-family: 'Pretendard Variable', sans-serif;
-  color: #111111;
+  color: var(--color);
 }
 
 .header {
@@ -108,7 +115,7 @@ h1 > a {
   display: block;
   padding: 12px 10px;
   line-height: 1;
-  color: rgba(255, 255, 255, 1);
+  color: var(--color-white);
 }
 .nav a:hover {
 
@@ -120,15 +127,16 @@ main {
   padding: 40px 20px;
 }
 .sidebar {
+  --input-color-size: 20px;
   position: sticky;
   top: 10px;
   z-index: 99;
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  border: 1px solid #d8d8d8;
+  border: 1px solid var(--border-color);
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: var(--background-color);
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .05);
 }
 .sidebar .tit {
@@ -162,17 +170,17 @@ main {
 .header-wrap h2 {
   margin-bottom: 15px;
   font-size: 32px;
-  color: #444444;
+  color: var(--color-gray2);
 }
 .header-wrap p {
   margin-bottom: 30px;
   font-size: 18px;
-  color: #444444;
+  color: var(--color-gray2);
 }
 .header-wrap .font-editor {
   width: 100%;
   padding: 10px;
-  border: 1px solid #d8d8d8;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .05);
   font-weight: var(--font-weight);
@@ -197,7 +205,7 @@ main {
 }
 .font-family-list > li {
   padding: 20px;
-  border: 1px solid #d8d8d8;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   transition: background 3s cubic-bezier(0.075, 0.82, 0.165, 1);
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .03);
@@ -249,7 +257,7 @@ main {
   flex: 1;
   min-height: 200px;
   padding: 15px;
-  border: 1px solid #d8d8d8;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .05);
   background-color: var(--background-color);
@@ -344,10 +352,10 @@ input[type="range"]:focus {
   outline: none;
 }
 
-/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/******** 크롬, 사파리, 오페라, 엣지 크롬 스타일 ********/
 /* slider track */
 input[type="range"]::-webkit-slider-runnable-track {
-  background-color: #dedede;
+  background-color: var(--track-color);
   border-radius: 2px;
   height: 6px;
 }
@@ -357,10 +365,10 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
   margin-top: -8px; /* Centers thumb on the track */
-  background-color: #181a33;
+  background-color: var(--thumb-color);
   border-radius: 50%;
-  height: 20px;
-  width: 20px;
+  width: var(--input-color-size);
+  height: var(--input-color-size);
 }
 
 input[type="range"]:focus::-webkit-slider-thumb {
@@ -370,38 +378,33 @@ input[type="range"]:focus::-webkit-slider-thumb {
 /*********** Firefox styles ***********/
 /* slider track */
 input[type="range"]::-moz-range-track {
-  background-color: #dedede;
+  background-color: var(--track-color);
   border-radius: 2px;
   height: 6px;
 }
 
 /* slider thumb */
 input[type="range"]::-moz-range-thumb {
-  background-color: #808080;
+  background-color: var(--thumb-color);
   border: none; /*Removes extra border that FF applies*/
   border-radius: 50%;
-  height: 20px;
-  width: 20px;
-}
-
-input[type="range"]:focus::-moz-range-thumb{
-  outline: 3px solid #808080;
-  outline-offset: 0.125rem;
+  width: var(--input-color-size);
+  height: var(--input-color-size);
 }
 
 input[type="color"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: var(--input-color-size);
+  height: var(--input-color-size);
   padding: 0;
-  border: none;
-  background-color: #e4e4e4;
-  cursor: pointer;
-  border: 1px solid #777777;
+  border: 1px solid #ffffff;
   border-radius: 50%;
-  padding: 1px;
+  background-color: var(--background-color-gray2);
+  background-origin: content-box;
+  box-shadow: 0 0 0 1px var(--input-border-color);
+  cursor: pointer;
 }
 input[type="color"]::-webkit-color-swatch {
   border-radius: 50%;
