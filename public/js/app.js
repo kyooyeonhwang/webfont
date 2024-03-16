@@ -15,13 +15,11 @@ function init() {
 init()
 
 function setRangeValue() {
-  listItems.forEach(fontPreview => {
-    fontPreview.style.setProperty('--font-size-22', jsFontSizeRange.value + 'px')
-    fontPreview.style.setProperty('--font-weight', jsFontWeightRange.value);
-    fontPreview.style.setProperty('--line-height', jsLineHeightRange.value);
-    fontPreview.style.setProperty('--color', jsColor.value);
-    fontPreview.style.setProperty('--background-color', jsBackgroundColor.value);
-  })
+  jsFontPreview.style.setProperty('--preview-font-size', jsFontSizeRange.value + 'px')
+  jsFontPreview.style.setProperty('--preview-font-weight', jsFontWeightRange.value);
+  jsFontPreview.style.setProperty('--preview-line-height', jsLineHeightRange.value);
+  jsFontPreview.style.setProperty('--preview-color-base', jsColor.value);
+  jsFontPreview.style.setProperty('--preview-background-color', jsBackgroundColor.value);
 }
 
 function getTextareaValue() {
@@ -37,31 +35,21 @@ jsFontEditor.addEventListener('input', function(e) {
 })
 
 jsFontSizeRange.addEventListener('input', function(e) {
-  listItems.forEach(listItem => {
-    listItem.style.setProperty('--font-size-22', e.currentTarget.value + 'px')
-  })
+  jsFontPreview.style.setProperty('--preview-font-size', e.currentTarget.value + 'px')
 })
 
 jsFontWeightRange.addEventListener('input', function(e) {
-  listItems.forEach(listItem => {
-    listItem.style.setProperty('--font-weight', e.currentTarget.value);
-  })
+  jsFontPreview.style.setProperty('--preview-font-weight', e.currentTarget.value)
 })
 
 jsLineHeightRange.addEventListener('input', function(e) {
-  listItems.forEach(listItem => {
-    listItem.style.setProperty('--line-height', e.currentTarget.value);
-  })
+  jsFontPreview.style.setProperty('--preview-line-height', e.currentTarget.value)
 })
 
 jsColor.addEventListener('input', function(e) {
-  listItems.forEach(listItem => {
-    listItem.style.setProperty('--color', e.currentTarget.value);
-  })
+  jsFontPreview.style.setProperty('--preview-color-base', e.currentTarget.value)
 })
 
 jsBackgroundColor.addEventListener('input', function(e) {
-  listItems.forEach(listItem => {
-    listItem.style.setProperty('--background-color', e.currentTarget.value);
-  })
+  jsFontPreview.style.setProperty('--preview-background-color', e.currentTarget.value)
 })

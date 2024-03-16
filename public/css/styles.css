@@ -248,6 +248,11 @@ main {
 }
 
 .font-preview-container {
+  --preview-font-size:  22px;
+  --preview-font-weight: 400;
+  --preview-line-height: 1;
+  --preview-color-base: #111111;
+  --preview-background-color: rgba(255, 255, 255, 1);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -260,7 +265,7 @@ main {
   border: 1px solid var(--border-color);
   border-radius: 8px;
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .05);
-  background-color: var(--background-color);
+  background-color: var(--preview-background-color);
 }
 .font-preview-container .font-name {
   margin-bottom: 15px;
@@ -268,11 +273,11 @@ main {
   font-size: var(--fs-base);
 }
 .font-preview-container .font-preview {
-  font-variation-settings: 'wght' var(--font-weight);
-  font-weight: var(--font-weight);
-  font-size: var(--font-size-22);
-  line-height: var(--line-height);
-  color: var(--color-base);
+  font-variation-settings: 'wght' var(--preview-font-weight);
+  font-weight: var(--preview-font-weight);
+  font-size: var(--preview-font-size);
+  line-height: var(--preview-line-height);
+  color: var(--preview-color-base);
   word-break: break-all;
 }
 
