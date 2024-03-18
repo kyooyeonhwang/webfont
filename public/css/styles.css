@@ -68,6 +68,7 @@
   --thumb-color: #181a33;
   --input-border-color: #bbbbbb;
   --grid-min-width: 330px;
+  --range-progress: calc(16.5%);
 }
 
 *,
@@ -141,8 +142,9 @@ main {
   padding: 10px 15px;
   border: 1px solid var(--border-color);
   border-radius: 10px;
-  background-color: var(--background-color);
+  background-color: rgba(255, 255, 255, .3);
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .05);
+  backdrop-filter: blur(25px);
 }
 .sidebar .tit {
   margin: 10px 20px 10px 0;
@@ -363,7 +365,7 @@ input[type="range"]:focus {
 /* slider track */
 input[type="range"]::-webkit-slider-runnable-track {
   background-color: var(--track-color);
-  border-radius: var(--input-range-border);
+  background: linear-gradient(90deg, var(--thumb-color) var(--range-progress), var(--track-color) var(--range-progress));  border-radius: var(--input-range-border);
   height: 6px;
 }
 
