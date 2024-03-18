@@ -150,7 +150,7 @@ main {
 .sidebar > ul {
   display: flex;
   gap: 10px;
-  flex: 1;
+  flex-grow: 1;
 }
 .sidebar li label {
   display: block;
@@ -167,7 +167,7 @@ main {
 .header-wrap {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(360px, auto));
   gap: 20px;
 }
 .header-wrap h2 {
@@ -255,8 +255,7 @@ main {
   --preview-color-base: #111111;
   --preview-background-color: rgba(255, 255, 255, 1);
   display: grid;
-  /* grid-template-columns: repeat(2, 1fr); */
-  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(360px, auto));
   gap: 20px;
   min-height: 200px;
   padding-top: 20px;
