@@ -67,6 +67,7 @@
   --track-color: #dedede;
   --thumb-color: #181a33;
   --input-border-color: #bbbbbb;
+  --grid-min-width: 330px;
 }
 
 *,
@@ -167,7 +168,7 @@ main {
 .header-wrap {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-columns: repeat(auto-fit, minmax(360px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-width), auto));
   gap: 20px;
 }
 .header-wrap h2 {
@@ -255,7 +256,7 @@ main {
   --preview-color-base: #111111;
   --preview-background-color: rgba(255, 255, 255, 1);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-width), auto));
   gap: 20px;
   min-height: 200px;
   padding-top: 20px;
