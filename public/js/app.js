@@ -1,12 +1,14 @@
-const jsFontEditor = document.getElementById('jsFontEditor');
-const jsFontPreview = document.getElementById('jsFontPreview');
+const $$ = (el) => document.querySelector(el);
+
+const jsFontEditor = $$('#jsFontEditor');
+const jsFontPreview = $$('#jsFontPreview');
 const listItems = jsFontPreview.querySelectorAll('.list-item');
 
-const jsFontSizeRange = document.getElementById('jsFontSizeRange');
-const jsFontWeightRange = document.getElementById('jsFontWeightRange');
-const jsLineHeightRange = document.getElementById('jsLineHeightRange');
-const jsColor = document.getElementById('jsColor');
-const jsBackgroundColor = document.getElementById('jsBackgroundColor');
+const jsFontSizeRange = $$('#jsFontSizeRange');
+const jsFontWeightRange = $$('#jsFontWeightRange');
+const jsLineHeightRange = $$('#jsLineHeightRange');
+const jsColor = $$('#jsColor');
+const jsBackgroundColor = $$('#jsBackgroundColor');
 
 function init() {
   setRangeValue()
