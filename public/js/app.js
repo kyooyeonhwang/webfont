@@ -16,6 +16,15 @@ function init() {
 }
 init()
 
+const setRangeProgress = (target) => {
+  const newValue = Number( (target.value - target.min) * 100 / (target.max - target.min) );
+  target.style.setProperty("--range-progress", `calc(${newValue}%)`);
+}
+
+const setCustomProperty = (element, propertyName, value, unit) => {
+  element.style.setProperty(`--${propertyName}`, `${value}${unit ? unit : ''}`);
+}
+
 function setRangeValue() {
   const fontSizeRangeValue = Number( (jsFontSizeRange.value - jsFontSizeRange.min) * 100 / (jsFontWeightRange.max - jsFontWeightRange.min) );
   jsFontWeightRange.style.setProperty("--range-progress", `calc(${fontSizeRangeValue}%)`);
@@ -43,28 +52,24 @@ jsFontEditor.addEventListener('input', function(e) {
 })
 
 jsFontSizeRange.addEventListener('input', function(e) {
-  const newValue = Number( (e.target.value - e.target.min) * 100 / (e.target.max - e.target.min) );
-  e.target.style.setProperty("--range-progress", `calc(${newValue}%)`);
-  jsFontPreview.style.setProperty('--preview-font-size', e.currentTarget.value + 'px')
+  setRangeProgress(e.target)
+  setCustomProperty(jsFontPreview, "preview-font-size", e.currentTarget.value, 'px')
 })
 
 jsFontWeightRange.addEventListener('input', function(e) {
-  console.log(e.target.value)
-  const newValue = Number( (e.target.value - e.target.min) * 100 / (e.target.max - e.target.min) );
-  e.target.style.setProperty("--range-progress", `calc(${newValue}%)`);
-  jsFontPreview.style.setProperty('--preview-font-weight', e.currentTarget.value)
+  setRangeProgress(e.target)
+  setCustomProperty(jsFontPreview, "preview-font-weight", e.currentTarget.value)
 })
 
 jsLineHeightRange.addEventListener('input', function(e) {
-  const newValue = Number( (e.target.value - e.target.min) * 100 / (e.target.max - e.target.min) );
-  e.target.style.setProperty("--range-progress", `calc(${newValue}%)`);
-  jsFontPreview.style.setProperty('--preview-line-height', e.currentTarget.value)
+  setRangeProgress(e.target)
+  setCustomProperty(jsFontPreview, "preview-line-height", e.currentTarget.value);
 })
 
 jsColor.addEventListener('input', function(e) {
-  jsFontPreview.style.setProperty('--preview-color-base', e.currentTarget.value)
+  setCustomProperty(jsFontPreview, "preview-color-base", e.currentTarget.value);
 })
 
 jsBackgroundColor.addEventListener('input', function(e) {
-  jsFontPreview.style.setProperty('--preview-background-color', e.currentTarget.value)
+  setCustomProperty(jsFontPreview, "preview-background-color", e.currentTarget.value);
 })
