@@ -250,6 +250,34 @@ main {
   opacity: 0.7;
   pointer-events: none;
 }
+.main-section {
+  margin-top: 40px;
+}
+.main-section h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 22px;
+}
+.main-section .list {}
+.main-section .list a:hover {
+  text-decoration: underline;
+}
+.main-section .list li {
+  position: relative;
+  padding-left: 13px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.main-section .list li::before {
+  content: '';
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
 
 .font-preview-container {
   --preview-font-size:  22px;
