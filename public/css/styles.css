@@ -53,7 +53,16 @@
 font-family:'87mmilsang Regular';
 src:local(※), url(/fonts/static/87MMILSANG-Regular.woff2) format('woff2') }
 
-
+@font-face {
+  font-family: 'Interop';
+  src: url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Regular.woff2')
+      format('woff2'),
+    url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Regular.woff')
+      format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
 
 :root {
   --fs-base: 16px;
@@ -371,6 +380,9 @@ main {
 }
 .wantedsans {
   font-family: 'Wanted Sans Variable', sans-serif;
+}
+.interop-normal {
+  font-family: 'Interop', sans-serif;
 }
 
 /*********** Baseline, reset styles ***********/
