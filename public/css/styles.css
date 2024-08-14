@@ -64,6 +64,13 @@ src:local(※), url(/fonts/static/87MMILSANG-Regular.woff2) format('woff2') }
   font-display: block;
 }
 
+@font-face {
+  font-family: 'Freesentation-4Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-4Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --fs-base: 16px;
   --font-size-22:  22px;
@@ -384,6 +391,9 @@ main {
 }
 .interop-normal {
   font-family: 'Interop', sans-serif;
+}
+.freesentation-normal {
+  font-family: 'Freesentation-4Regular', sans-serif;
 }
 
 /*********** Baseline, reset styles ***********/
