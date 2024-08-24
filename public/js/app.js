@@ -9,6 +9,7 @@ const jsFontWeightRange = $$('#jsFontWeightRange');
 const jsLineHeightRange = $$('#jsLineHeightRange');
 const jsColor = $$('#jsColor');
 const jsBackgroundColor = $$('#jsBackgroundColor');
+const jsToggleVisibility = $$('#jsToggleVisibility');
 
 function init() {
   setRangeValue()
@@ -72,4 +73,18 @@ jsColor.addEventListener('input', function(e) {
 
 jsBackgroundColor.addEventListener('input', function(e) {
   setCustomProperty(jsFontPreview, "preview-background-color", e.currentTarget.value);
+})
+
+jsToggleVisibility.addEventListener('click', function(e) {
+  console.log(e.target);
+  const target = e.target;
+  if(target.classList.contains('input-item')) {
+    listItems.forEach(listItem => {
+      if (listItem.dataset.id === target.id) {
+        console.log(listItem.dataset.id)
+        listItem.classList.toggle('hide')
+      }
+
+    })
+  }
 })

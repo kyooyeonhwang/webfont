@@ -78,10 +78,30 @@ abcdefghijklnmopqrstuvwxyz</textarea>
 
       <ul class="font-preview-container" id="jsFontPreview">
         {
-          fontPreviewLists.map((data) => (
-            <li class="list-item">
+          fontPreviewLists.map((data, index) => (
+            <li class="list-item" data-id={"checklist" + index}>
               <p class="font-name">{data.fontName}</p>
               <div class:list={[ 'font-preview', 'ui-font-preview', [data.className] ]}></div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="checklist" id="jsToggleVisibility">
+      <ul>
+        {
+          fontPreviewLists.map((data, index) => (
+            <li>
+              <label>
+                <input 
+                  type="checkbox"
+                  name={"checklist" + index} 
+                  id={"checklist" + index} 
+                  class="input-item"
+                  checked
+                >
+                <span class="text">{data.fontName}</span>
+              </label>
             </li>
           ))
         }
