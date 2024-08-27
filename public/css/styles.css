@@ -148,6 +148,10 @@ main {
   gap: 30px;
   padding: 40px 20px;
 }
+.home main {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
 .sidebar {
   --input-color-size: 20px;
   --input-range-border: 2px; 
