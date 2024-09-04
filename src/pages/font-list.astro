@@ -88,6 +88,7 @@ abcdefghijklnmopqrstuvwxyz</textarea>
       </ul>
     </div>
     <div class="checklist" id="jsToggleVisibility">
+      <h3>Font List Filter</h3>
       <ul>
         {
           fontPreviewLists.map((data, index) => (
@@ -98,7 +99,6 @@ abcdefghijklnmopqrstuvwxyz</textarea>
                   name={"checklist" + index} 
                   id={"checklist" + index} 
                   class="input-item"
-                  checked
                 >
                 <span class="text">{data.fontName}</span>
               </label>
