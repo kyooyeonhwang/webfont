@@ -12,6 +12,7 @@
 @import url('https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.2/packages/wanted-sans/fonts/webfonts/variable/complete/WantedSansVariable.min.css');
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 @font-face{ 
   font-family:'Min Sans Variable';
@@ -105,22 +106,25 @@ body, textarea, a, div, p {
   color: var(--color-base);
 }
 
+body {
+  background-color: rgb(250, 250, 250);
+}
+
 .header {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding: 10px 20px 5px;
-  background: #558B58;
-}
-h1 {
-  margin-bottom: 10px;
+  align-items: center;
+  max-width: 1400px;
+  padding: 15px 20px 15px;
+  margin: auto;
 }
 h1 > a {
   padding: 15px 0 5px;
-  font-size: 34px;
+  font-size: 24px;
   text-transform: uppercase;
-  color: #F5E16D;
-  font-family: "Fraunces", serif;
+  color: #000000;
+  font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
@@ -135,12 +139,17 @@ h1 > a {
 }
 .nav a {
   display: block;
-  padding: 12px 10px;
+  padding: 12px 15px;
+  border-radius: 100vmin;
+  font-size: 16px;
   line-height: 1;
-  color: var(--color-white);
+  color: #666666;
+  background-color: transparent;
+  transition: background-color .1s ease-in;
 }
 .nav a:hover {
-
+  color: #171717;
+  background-color: rgba(0, 0, 0, .06);
 }
 main {
   display: grid;
@@ -224,7 +233,7 @@ main:has(.checklist) {
   align-items: center;
   font-size: 14px;
   color: rgba(23, 23, 23, 1);
-  background-color: rgb(250, 250, 250);
+  background-color: #f1f1f1;
   user-select: none;
   cursor: pointer;
 }
@@ -289,7 +298,7 @@ main:has(.checklist) {
   padding: 15px;
   border: 0 none;
   border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0,0,0,.12);
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
   background-color: var(--preview-background-color);
   font-weight: var(--font-weight);
   font-size: var(--font-size-22);
@@ -317,6 +326,7 @@ main:has(.checklist) {
   border-radius: 8px;
   transition: background 3s cubic-bezier(0.075, 0.82, 0.165, 1);
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .03);
+  background-color: #FFFFFF;
 }
 .font-family-list > li:hover {
   background: rgba(0, 0, 0, .03);
@@ -400,7 +410,7 @@ main:has(.checklist) {
   min-height: 200px;
   padding: 15px;
   border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0,0,0,.12);
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
   background-color: var(--preview-background-color);
 }
 .font-preview-container .font-name {
