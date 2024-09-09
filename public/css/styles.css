@@ -144,11 +144,14 @@ h1 > a {
 }
 main {
   display: grid;
-  grid-template-columns: 1fr 230px;
+  grid-template-columns: 1fr;
   gap: 30px;
   max-width: 1200px;
   padding: 40px 20px;
   margin: auto;
+}
+main:has(.checklist) {
+  grid-template-columns: 1fr 230px;
 }
 .home main {
   grid-template-columns: 1fr;
@@ -390,15 +393,15 @@ main {
   min-height: 200px;
   padding-top: 20px;
 }
+.font-preview-container:has(.active) .list-item:not(.active) {
+  display: none;
+}
 .font-preview-container .list-item {
   min-height: 200px;
   padding: 15px;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0,0,0,.12);
   background-color: var(--preview-background-color);
-}
-.font-preview-container .list-item.hide {
-  display: none;
 }
 .font-preview-container .font-name {
   margin-bottom: 15px;
