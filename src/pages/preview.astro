@@ -59,4 +59,24 @@ abcdefghijklnmopqrstuvwxyz</textarea>
         }
       </ul>
     </div>
+    <div class="checklist" id="jsToggleVisibility">
+      <h3>Font List Filter</h3>
+      <ul>
+        {
+          fontPreviewLists.map((data, index) => (
+            <li>
+              <label>
+                <input 
+                  type="checkbox"
+                  name={"checklist" + index} 
+                  id={"checklist" + index} 
+                  class="input-item"
+                >
+                <span class="text">{data.fontName}</span>
+              </label>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
 </Layout>
