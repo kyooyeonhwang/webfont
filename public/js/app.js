@@ -17,8 +17,8 @@ function init() {
 init()
 
 const setRangeProgress = (target) => {
-  const newValue = Number( (target.value - target.min) * 100 / (target.max - target.min) );
-  target.style.setProperty("--range-progress", `calc(${newValue}%)`);
+  const newValue = Math.floor(((target.value - target.min) / (target.max - target.min)) * 100);
+  target.style.setProperty("--range-progress", `${newValue}%`);
 }
 
 const setCustomProperty = (element, propertyName, value, unit) => {
@@ -26,8 +26,8 @@ const setCustomProperty = (element, propertyName, value, unit) => {
 }
 
 function setRangeValue() {
-  const fontSizeRangeValue = Number( (jsFontSizeRange.value - jsFontSizeRange.min) * 100 / (jsFontWeightRange.max - jsFontWeightRange.min) );
-  jsFontWeightRange.style.setProperty("--range-progress", `calc(${fontSizeRangeValue}%)`);
+  var fontSizeRangeValue = Math.floor(((jsFontSizeRange.value - jsFontSizeRange.min) / (jsFontSizeRange.max - jsFontSizeRange.min)) * 100);
+  jsFontSizeRange.style.setProperty("--range-progress", `${fontSizeRangeValue}%`);
   const fontWeightRangeValue = Number( (jsFontWeightRange.value - jsFontWeightRange.min) * 100 / (jsFontWeightRange.max - jsFontWeightRange.min) );
   jsFontWeightRange.style.setProperty("--range-progress", `calc(${fontWeightRangeValue}%)`);
   const lineHeightRangeValue = Number( (jsLineHeightRange.value - jsLineHeightRange.min) * 100 / (jsLineHeightRange.max - jsLineHeightRange.min) );
