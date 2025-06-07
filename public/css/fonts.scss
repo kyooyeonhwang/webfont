@@ -98,3 +98,17 @@ src:local(※), url(/fonts/static/87MMILSANG-Regular.woff2) format('woff2') }
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'AstaSans-Bold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/AstaSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AstaSans-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/AstaSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
