@@ -117,3 +117,8 @@ src:local(※), url(/fonts/static/87MMILSANG-Regular.woff2) format('woff2') }
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'A2Z-Regular';
+  src:local(※), url('/fonts/static/a2z-4Regular.woff2') format('woff2');
+}
