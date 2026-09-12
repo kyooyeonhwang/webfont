@@ -15,3 +15,7 @@ yarn-error.log*
 
 # macOS-specific files
 .DS_Store
+
+# Claude Code local skill config
+.agents/
+skills-lock.json
