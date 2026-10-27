@@ -12,7 +12,6 @@
 @import url('https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.2/packages/wanted-sans/fonts/webfonts/static/complete/WantedSans.min.css');
 @import url('https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.2/packages/wanted-sans/fonts/webfonts/variable/complete/WantedSansVariable.min.css');
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 
 @font-face{ 
@@ -44,16 +43,8 @@
   src:local(※), url(/fonts/static/NanumSquareNeo-Regular.woff2) format('woff2') }
 
 @font-face{ 
-  font-family:'87mmilsang Oblique';
-  src:local(※), url(/fonts/static/87MMILSANG-Oblique.woff2) format('woff2') }
-
-@font-face{ 
   font-family:'87mmilsang Regular';
   src:local(※), url(/fonts/static/87MMILSANG-Regular.woff2) format('woff2') }
-
-@font-face{ 
-font-family:'87mmilsang Regular';
-src:local(※), url(/fonts/static/87MMILSANG-Regular.woff2) format('woff2') }
 
 @font-face {
   font-family: 'Interop';
@@ -93,22 +84,8 @@ src:local(※), url(/fonts/static/87MMILSANG-Regular.woff2) format('woff2') }
 }
 
 @font-face {
-  font-family: 'Freesentation Regular';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
 	font-family: 'AstaSans Variable';
 	src:local(※), url(/fonts/variable/AstaSans-Variable.woff2) format('woff2');
-}
-
-@font-face {
-  font-family: 'AstaSans-Bold';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/AstaSans-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
 }
 
 @font-face {

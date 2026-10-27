@@ -30,7 +30,7 @@ npm run preview
 - **Astro 4.0**: 컴포넌트 기반 아키텍처를 가진 정적 사이트 생성기
 - **SCSS**: Sass 전처리기를 사용한 스타일링
 - **Vanilla JavaScript**: 클라이언트 측 인터랙션 (프레임워크 미사용)
-- **Netlify**: 서버리스 함수를 지원하는 배포 플랫폼
+- **Netlify**: 배포 플랫폼
 
 ### 프로젝트 구조
 
@@ -46,7 +46,6 @@ npm run preview
 │   │   └── variable/   # 가변 폰트 파일
 │   ├── css/            # 스타일시트 (fonts.scss, styles.scss)
 │   └── js/             # 클라이언트 스크립트 (app.js)
-└── functions/          # Netlify 서버리스 함수
 ```
 
 ### 레이아웃 시스템
