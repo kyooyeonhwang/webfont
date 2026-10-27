@@ -5,21 +5,26 @@ import MainHead from '../components/MainHead.astro'
 import FontStyleCustom from '../components/FontStyleCustom.astro'
 import '../../public/css/styles.scss';
 
-const { title, description, head } = Astro.props;
+export interface Props {
+  title: string;
+  description: string;
+  isHome?: boolean;
+  disableWeight?: boolean;
+}
+
+const { title, description, isHome = false, disableWeight = false } = Astro.props;
 ---
 <html lang="ko">
   <head>
-    {head}
     <MainHead title={title} description={description} />
   </head>
-  <body>
+  <body class:list={[{ home: isHome }]}>
       <Header/>
       <main>
-        <FontStyleCustom/>
+        {!isHome && <FontStyleCustom disableWeight={disableWeight} />}
         <slot />
-        
       </main>
       <Footer />
-  <script src="/js/app.js" "is:inline"></script>
+  {!isHome && <script is:inline src="/js/app.js"></script>}
   </body>
 </html>

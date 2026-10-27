@@ -10,12 +10,6 @@ const jsLineHeightRange = $$('#jsLineHeightRange');
 const jsColor = $$('#jsColor');
 const jsBackgroundColor = $$('#jsBackgroundColor');
 
-function init() {
-  setRangeValue()
-  getTextareaValue()
-}
-init()
-
 const setRangeProgress = (target) => {
   const newValue = Math.floor(((target.value - target.min) / (target.max - target.min)) * 100);
   target.style.setProperty("--range-progress", `${newValue}%`);
@@ -26,30 +20,24 @@ const setCustomProperty = (element, propertyName, value, unit) => {
 }
 
 function setRangeValue() {
-  var fontSizeRangeValue = Math.floor(((jsFontSizeRange.value - jsFontSizeRange.min) / (jsFontSizeRange.max - jsFontSizeRange.min)) * 100);
-  jsFontSizeRange.style.setProperty("--range-progress", `${fontSizeRangeValue}%`);
-  const fontWeightRangeValue = Number( (jsFontWeightRange.value - jsFontWeightRange.min) * 100 / (jsFontWeightRange.max - jsFontWeightRange.min) );
-  jsFontWeightRange.style.setProperty("--range-progress", `calc(${fontWeightRangeValue}%)`);
-  const lineHeightRangeValue = Number( (jsLineHeightRange.value - jsLineHeightRange.min) * 100 / (jsLineHeightRange.max - jsLineHeightRange.min) );
-  jsLineHeightRange.style.setProperty("--range-progress", `calc(${lineHeightRangeValue}%)`);
-  jsFontPreview.style.setProperty('--preview-font-size', jsFontSizeRange.value + 'px')
-  jsFontPreview.style.setProperty('--preview-font-weight', jsFontWeightRange.value);
-  jsFontPreview.style.setProperty('--preview-line-height', jsLineHeightRange.value);
-  jsFontPreview.style.setProperty('--preview-color-base', jsColor.value);
-  jsFontPreview.style.setProperty('--preview-background-color', jsBackgroundColor.value);
+  [jsFontSizeRange, jsFontWeightRange, jsLineHeightRange].forEach(setRangeProgress);
+  setCustomProperty(jsFontPreview, 'preview-font-size', jsFontSizeRange.value, 'px');
+  setCustomProperty(jsFontPreview, 'preview-font-weight', jsFontWeightRange.value);
+  setCustomProperty(jsFontPreview, 'preview-line-height', jsLineHeightRange.value);
+  setCustomProperty(jsFontPreview, 'preview-color-base', jsColor.value);
+  setCustomProperty(jsFontPreview, 'preview-background-color', jsBackgroundColor.value);
 }
 
 function getTextareaValue() {
   listItems.forEach(listItem => {
-    listItem.querySelector('.ui-font-preview').innerHTML = jsFontEditor.value.replace(/\r?\n/g, '<br />');;
+    listItem.querySelector('.ui-font-preview').innerHTML = jsFontEditor.value.replace(/\r?\n/g, '<br />');
   })
 }
 
-jsFontEditor.addEventListener('input', function(e) {
-  listItems.forEach(listItem => {
-    listItem.querySelector('.ui-font-preview').innerHTML = e.currentTarget.value.replace(/\r?\n/g, '<br />');;
-  })
-})
+setRangeValue()
+getTextareaValue()
+
+jsFontEditor.addEventListener('input', getTextareaValue)
 
 jsFontSizeRange.addEventListener('input', function(e) {
   setRangeProgress(e.target)

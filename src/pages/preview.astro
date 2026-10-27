@@ -1,6 +1,7 @@
 ---
-// Layout Import
 import Layout from '../layouts/Layout.astro'
+import FontPreviewSection from '../components/FontPreviewSection.astro'
+import FontFilter from '../components/FontFilter.astro'
 
 const fontPreviewLists = [
   {
@@ -44,47 +45,10 @@ const fontPreviewLists = [
 <Layout
   title="| 한글 가변 폰트 미리보기"
   description={`프리텐다드, 수트, 민 산스 등 가변 폰트(Variable Font)를 지원하는 한글 웹폰트를 실시간으로 미리보기하세요. 폰트 굵기와 크기를 자유롭게 조절하며 비교할 수 있습니다.`}>
-    <div class="content">
-      <div class="header-wrap">
-        <hgroup>
-          <h2>한글 가변 폰트</h2>
-          <p>본문에 사용할만한 가변 폰트 목록입니다.</p>
-        </hgroup>
-        <textarea name="" cols="30" rows="10" class="font-editor" id="jsFontEditor">1234567890
-가나다라마바사
-ABCDEFGHIJKLNMOPQRSTUVWXYZ
-abcdefghijklnmopqrstuvwxyz</textarea>
-      </div>
-
-      <ul class="font-preview-container" id="jsFontPreview">
-        {
-          fontPreviewLists.map((data) => (
-            <li class="list-item">
-              <p class="font-name">{data.fontName}</p>
-              <div class:list={[ 'font-preview ui-font-preview', [data.className] ]}></div>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-    <div class="checklist" id="jsToggleVisibility">
-      <h3>Font List Filter</h3>
-      <ul>
-        {
-          fontPreviewLists.map((data, index) => (
-            <li>
-              <label>
-                <input 
-                  type="checkbox"
-                  name={"checklist" + index} 
-                  id={"checklist" + index} 
-                  class="input-item"
-                >
-                <span class="text">{data.fontName}</span>
-              </label>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
+    <FontPreviewSection
+      heading="한글 가변 폰트"
+      lead="본문에 사용할만한 가변 폰트 목록입니다."
+      fonts={fontPreviewLists}
+    />
+    <FontFilter fonts={fontPreviewLists} />
 </Layout>

@@ -38,8 +38,8 @@ npm run preview
 /
 ├── src/
 │   ├── components/     # 재사용 가능한 Astro 컴포넌트
-│   ├── layouts/        # 페이지 레이아웃 (Layout.astro, MainLayout.astro)
-│   └── pages/          # 라우트 페이지 (index.astro, font-list.astro, font-compare.astro)
+│   ├── layouts/        # 페이지 레이아웃 (Layout.astro)
+│   └── pages/          # 라우트 페이지 (index.astro, font-list.astro, preview.astro, font-compare.astro)
 ├── public/
 │   ├── fonts/          # 폰트 파일
 │   │   ├── static/     # 일반 폰트 파일 (.woff, .woff2)
@@ -50,18 +50,25 @@ npm run preview
 
 ### 레이아웃 시스템
 
-body 클래스와 사이드바 포함 여부만 다른 두 개의 메인 레이아웃이 있습니다:
+모든 페이지는 `Layout.astro` 하나를 사용합니다:
 
-- **MainLayout.astro**: 홈페이지에 사용, `<body class="home">` 포함, 사이드바 없음
-- **Layout.astro**: 미리보기 페이지에 사용, 폰트 커스터마이징 사이드바가 있는 `<FontStyleCustom/>` 컴포넌트 포함
+- `isHome`: 홈페이지용. `<body class="home">`를 붙이고 사이드바(`FontStyleCustom`)와 `app.js`를 넣지 않음
+- `disableWeight`: 폰트 굵기 슬라이더(`#jsFontWeightRange`) 비활성화 (일반 폰트 페이지용)
 
-두 레이아웃 모두 동일한 컴포넌트를 import합니다: `Header`, `Footer`, `MainHead`, `FontStyleCustom`, `styles.scss`
+### 공통 컴포넌트
+
+- `FontPreviewSection.astro`: 제목, 미리보기 textarea, 폰트 미리보기 목록 (`heading`, `lead`, `fonts` props)
+- `FontFilter.astro`: 폰트 표시 필터 체크리스트 (`fonts` props)
+- `FontStyleCustom.astro`: 크기·굵기·줄높이·색상 조절 사이드바
+- `ExternalLink.astro`: `target="_blank"`, `rel="noopener noreferrer"`, `title="새창열림"`을 붙인 외부 링크
+- `Header.astro`, `Footer.astro`, `MainHead.astro`
 
 ### 페이지
 
 1. **index.astro** (홈페이지): 한글 폰트 리소스 목록, GitHub 저장소와 홈페이지 링크 제공
-2. **font-list.astro**: 약 17개의 한글 폰트를 인터랙티브하게 미리보기, 커스터마이징 가능한 스타일과 필터 체크리스트 제공
-3. **font-compare.astro**: 가변 폰트와 일반 폰트를 나란히 비교 (현재 Pretendard만 지원)
+2. **font-list.astro**: 18개의 한글 일반 폰트를 인터랙티브하게 미리보기, 커스터마이징 가능한 스타일과 필터 체크리스트 제공
+3. **preview.astro**: 한글 가변 폰트 미리보기와 필터 체크리스트 제공
+4. **font-compare.astro**: 가변 폰트와 일반 폰트를 나란히 비교 (현재 Pretendard만 지원)
 
 ### 폰트 관리
 
@@ -83,7 +90,7 @@ body 클래스와 사이드바 포함 여부만 다른 두 개의 메인 레이�
 - 줄 높이 슬라이더 (1-2)
 - 색상 선택기
 - 배경색 선택기
-- 폰트 가시성 토글 체크박스 (font-list 페이지)
+- 폰트 가시성 토글 체크박스 (font-list, preview 페이지)
 
 이 컨트롤들은 미리보기 컨테이너의 CSS 커스텀 속성을 동적으로 업데이트합니다.
 
@@ -123,7 +130,7 @@ body 클래스와 사이드바 포함 여부만 다른 두 개의 메인 레이�
 ## 중요 참고사항
 
 - 사이트는 한국어(`lang="ko"`)를 사용하며 콘텐츠에 한글 텍스트를 포함합니다
-- 특정 페이지에서는 `#jsFontWeightRange`를 확인하는 인라인 스크립트를 통해 폰트 굵기 컨트롤이 비활성화됩니다
-- 모든 외부 링크는 `target="_blank"`와 `title="새창열림"`을 사용합니다
+- 일반 폰트 페이지(font-list)에서는 `Layout`의 `disableWeight` prop으로 폰트 굵기 컨트롤이 비활성화됩니다
+- 외부 링크는 `ExternalLink` 컴포넌트를 사용합니다
 - 메인 JavaScript는 간단한 `$$()` 셀렉터 헬퍼를 사용합니다: `const $$ = (el) => document.querySelector(el)`
 - Textarea 콘텐츠는 미리보기 div에 렌더링될 때 `replace(/\r?\n/g, '<br />')`를 사용하여 처리됩니다

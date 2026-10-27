@@ -1,11 +1,22 @@
 ---
+const navItems = [
+  { href: '/font-list/', label: '한글 일반 폰트' },
+  { href: '/preview/', label: '한글 가변 폰트' },
+  { href: '/font-compare/', label: '폰트 비교' }
+]
 
----  
+const normalize = (path: string) => path.replace(/\/$/, '')
+const currentPath = normalize(Astro.url.pathname)
+---
 <header class="header">
   <h1><a href="/">font preview</a></h1>
   <ul class="nav">
-    <li><a href="/font-list/">한글 일반 폰트</a></li>
-    <li><a href="/preview/">한글 가변 폰트</a></li>
-    <li><a href="/font-compare/">폰트 비교</a></li>
+    {
+      navItems.map((item) => (
+        <li>
+          <a href={item.href} aria-current={normalize(item.href) === currentPath ? 'page' : undefined}>{item.label}</a>
+        </li>
+      ))
+    }
   </ul>
 </header>

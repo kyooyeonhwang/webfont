@@ -1,33 +1,24 @@
 ---
-// Layout Import
 import Layout from '../layouts/Layout.astro'
+import FontPreviewSection from '../components/FontPreviewSection.astro'
 
+const fontPreviewLists = [
+  {
+    fontName: 'Pretendard Variable',
+    className: 'pretendard'
+  },
+  {
+    fontName: 'Pretendard',
+    className: 'pretendard-normal'
+  }
+]
 ---
 <Layout
   title="| 일반 폰트와 가변 폰트 비교"
   description={`프리텐다드 일반 폰트와 가변 폰트(Variable Font)를 나란히 비교하며 렌더링 차이와 사용성을 확인해볼 수 있습니다.`}>
-    <div class="content">
-      <div class="header-wrap">
-        <hgroup>
-          <h2>폰트 비교</h2>
-          <p>일반폰트와 가변 폰트를 비교하기 위해서 입니다.</p>
-        </hgroup>
-        <textarea name="" cols="30" rows="10" class="font-editor" id="jsFontEditor">1234567890
-가나다라마바사
-ABCDEFGHIJKLNMOPQRSTUVWXYZ
-abcdefghijklnmopqrstuvwxyz</textarea>
-
-      </div>
-  
-      <ul class="font-preview-container" id="jsFontPreview">
-        <li class="list-item">
-          <p class="font-name">Pretendard Variable</p>
-          <div class="font-preview ui-font-preview pretendard"></div>
-        </li>
-        <li class="list-item">
-          <p class="font-name">Pretendard</p>
-          <div class="font-preview ui-font-preview pretendard-normal"></div>
-        </li>
-      </ul>
-    </div>
+    <FontPreviewSection
+      heading="폰트 비교"
+      lead="일반폰트와 가변 폰트를 비교하기 위해서 입니다."
+      fonts={fontPreviewLists}
+    />
 </Layout>
